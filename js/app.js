@@ -13,15 +13,12 @@ function showMessage () {
         messageDate=document.querySelectorAll('.date');
         lastMessageDate=messageDate[messageDate.length-1];
         currenteDate= new Date();
-        currenteDate.setHours(0);
-        currenteDate.setMinutes(0);
-        currenteDate.setSeconds(0);
-        currenteDate.setMilliseconds(0);
-        if (lastMessageDate.innerHTML !== currenteDate.toLocaleDateString()) {
+        const options = {  year: 'numeric', month: 'long', day: 'numeric' };
+        if (lastMessageDate.innerHTML !== currenteDate.toLocaleDateString(undefined, options)) {
             lastMessage.insertAdjacentHTML('afterend',
             `<div class="date-line">
                 <div class="line line-left"></div>
-                <div class="date">${currenteDate.toLocaleDateString()}</div>
+                <div class="date">${currenteDate.toLocaleDateString(undefined, options)}</div>
                 <div class="line line-right"></div>
             </div>`);
             message=document.querySelectorAll('.dialog-area__inner>div');
