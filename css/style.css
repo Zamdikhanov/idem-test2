@@ -70,6 +70,7 @@ html {
     border-radius: 5px;
     padding: 11px 15px;
     position: relative;
+    word-break: break-all;
 }
 
 .message-user {
