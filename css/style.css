@@ -52,6 +52,7 @@ html {
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    max-width: 100%;
 }
 
 .user {
@@ -70,7 +71,10 @@ html {
     border-radius: 5px;
     padding: 11px 15px;
     position: relative;
-    word-break: break-all;
+    max-width: calc(100% - 146px);
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    display: block;
 }
 
 .message-user {
